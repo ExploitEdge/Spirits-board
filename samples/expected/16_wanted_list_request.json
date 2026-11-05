@@ -1,0 +1,62 @@
+{
+ "file": "16_wanted_list_request.txt",
+ "side": "request",
+ "source_type": "email",
+ "list_defaults": {
+  "customs_status": "T2",
+  "incoterm": "CIF",
+  "warehouse_city": "Singapore",
+  "lead_time_days": 21
+ },
+ "match_by": "best",
+ "lots": [
+  {
+   "brand": "Johnnie Walker",
+   "product_name": "Black Label",
+   "category": "whisky",
+   "age_statement": "12YO",
+   "edition": "Black Label",
+   "bottle_size_cl": 100,
+   "bottles_per_case": 12,
+   "price": 24.5,
+   "price_unit": "bottle",
+   "currency": "USD",
+   "quantity": 2,
+   "quantity_unit": "ftl"
+  },
+  {
+   "brand": "Hennessy",
+   "product_name": "VSOP",
+   "category": "cognac",
+   "edition": "VSOP",
+   "bottle_size_cl": 70,
+   "bottles_per_case": 12,
+   "packaging": "GBX",
+   "quantity": 500,
+   "quantity_unit": "cases"
+  },
+  {
+   "brand": "Chivas Regal",
+   "product_name": "12 Year Old",
+   "category": "whisky",
+   "age_statement": "12YO",
+   "bottle_size_cl": 70,
+   "bottles_per_case": 6,
+   "price": 19.0,
+   "price_unit": "bottle",
+   "currency": "USD",
+   "quantity": 3,
+   "quantity_unit": "pallets"
+  },
+  {
+   "brand": "Grey Goose",
+   "product_name": "Vodka",
+   "category": "vodka",
+   "bottle_size_cl": 100,
+   "abv": 40,
+   "bottles_per_case": 6,
+   "quantity": 1,
+   "quantity_unit": "ftl"
+  }
+ ]
+}

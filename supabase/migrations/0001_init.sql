@@ -16,7 +16,18 @@ create table companies (
   vat_number     text,
   excise_number  text,
   verified       boolean not null default false,
-  created_at     timestamptz not null default now()
+  -- Your standing knowledge of this distributor. Every list uploaded for
+  -- this company inherits these unless the list itself says otherwise.
+  default_incoterm         text,
+  default_customs_status   text,
+  default_warehouse_city   text,
+  default_warehouse_country char(2),
+  default_lead_time_text   text,
+  default_lead_time_days   int,
+  default_currency         char(3),
+  notes                    text,
+  created_at     timestamptz not null default now(),
+  unique (name)
 );
 
 -- ------------------------------------------------------------
@@ -42,6 +53,10 @@ create table uploads (
   default_customs_status  text,
   default_warehouse       text,
   valid_until             date,
+  -- How the table's columns were read (AI decides once, code applies to
+  -- every row). Re-used for the next list from the same company.
+  column_mapping          jsonb,
+  row_count               int,
   created_by              uuid references auth.users(id),
   created_at              timestamptz not null default now()
 );
@@ -96,6 +111,7 @@ create table lots (
   product_name          text,
   category              text,
   age_statement         text,
+  edition               text,
 
   -- specs
   bottle_size_cl        numeric(6,1),     -- normalised: 0.7L -> 70, 1L -> 100
@@ -147,7 +163,13 @@ create table lots (
   created_at            timestamptz not null default now(),
   updated_at            timestamptz not null default now()
 );
+-- When a new list is saved for a company, its previous live offers are
+-- set to 'expired' and point to the upload that replaced them. Old prices
+-- stay in the table, which later gives you price history.
+alter table lots add column replaced_by_upload uuid references uploads(id);
+
 create index lots_board_idx   on lots (side, status, product_id);
+create index lots_company_idx on lots (company_id, side, status);
 create index lots_valid_idx   on lots (valid_until);
 create index lots_brand_trgm  on lots using gin ((coalesce(brand,'') || ' ' || coalesce(product_name,'')) gin_trgm_ops);
 

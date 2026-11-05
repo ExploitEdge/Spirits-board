@@ -1,0 +1,7 @@
+Product	Cfg	ABV	EUR/cs
+Jamsen	12x100	40	131.20
+Jonnie Walker Black 12y	12x70cl	40	228.00
+Absolut	24x35cl	40	110.40
+Captian Morgan Spiced	6x70	35	60.10
+Aperol	6x100	11	66.90
+Hennesy VS	12x70	40	298.50

@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "eval": "tsx scripts/eval.ts",
+    "test:normalise": "tsx scripts/test-normalise.ts",
+    "samples": "python3 samples/generate.py"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.5.0",

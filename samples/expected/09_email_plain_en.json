@@ -1,0 +1,81 @@
+{
+ "file": "09_email_plain_en.txt",
+ "side": "offer",
+ "source_type": "email",
+ "list_defaults": {
+  "currency": "EUR",
+  "incoterm": "EXW",
+  "customs_status": "T2",
+  "warehouse_city": "Riga"
+ },
+ "match_by": "best",
+ "lots": [
+  {
+   "brand": "Johnnie Walker",
+   "product_name": "Red Label",
+   "category": "whisky",
+   "edition": "Red Label",
+   "bottle_size_cl": 100,
+   "abv": 40,
+   "bottles_per_case": 12,
+   "price": 101.5,
+   "price_unit": "case",
+   "currency": "EUR",
+   "packaging": "NGBX",
+   "quantity": 3,
+   "quantity_unit": "pallets"
+  },
+  {
+   "brand": "Jameson",
+   "product_name": "Irish Whiskey",
+   "category": "whisky",
+   "bottle_size_cl": 70,
+   "abv": 40,
+   "bottles_per_case": 6,
+   "price": 72.0,
+   "price_unit": "case",
+   "currency": "EUR",
+   "packaging": "GBX",
+   "quantity": 1,
+   "quantity_unit": "ftl"
+  },
+  {
+   "brand": "Absolut",
+   "product_name": "Vodka",
+   "category": "vodka",
+   "bottle_size_cl": 100,
+   "abv": 40,
+   "bottles_per_case": 12,
+   "price": 98.4,
+   "price_unit": "case",
+   "currency": "EUR"
+  },
+  {
+   "brand": "Bacardi",
+   "product_name": "Carta Blanca",
+   "category": "rum",
+   "edition": "Carta Blanca",
+   "bottle_size_cl": 70,
+   "abv": 37.5,
+   "bottles_per_case": 6,
+   "price": 51.9,
+   "price_unit": "case",
+   "currency": "EUR",
+   "lead_time_days": 0
+  },
+  {
+   "brand": "Hennessy",
+   "product_name": "VS",
+   "category": "cognac",
+   "edition": "VS",
+   "bottle_size_cl": 70,
+   "abv": 40,
+   "bottles_per_case": 12,
+   "price": 316.0,
+   "price_unit": "case",
+   "currency": "EUR",
+   "packaging": "GBX",
+   "lead_time_days": 14
+  }
+ ]
+}
